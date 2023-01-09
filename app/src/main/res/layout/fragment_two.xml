@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="me.tanishqchawda.todoapp.viewModel.RoomViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.TwoFragment">
+
+        <ImageView
+            android:id="@+id/arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"/>
+
+
+
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:id="@+id/title"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            app:boxBackgroundMode="outline"-->
+        <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+        <!--            app:boxCornerRadiusTopEnd="16dp"-->
+        <!--            app:boxCornerRadiusTopStart="16dp"-->
+        <!--            app:boxCornerRadiusBottomStart="16dp"-->
+        <!--            app:boxCornerRadiusBottomEnd="16dp"-->
+        <!--            app:counterEnabled="true"-->
+        <!--            app:counterMaxLength="20"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent">-->
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="@={viewModel.title}"-->
+        <!--                android:maxLength="20"-->
+        <!--                android:hint="Title" />-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+        <!--        <Spinner-->
+        <!--            android:id="@+id/priorities_spinner"-->
+        <!--            android:layout_width="0dp"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:padding="20sp"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            android:paddingStart="10dp"-->
+        <!--            android:paddingEnd="10dp"-->
+        <!--            android:layout_marginStart="20dp"-->
+        <!--            android:layout_marginEnd="20dp"-->
+        <!--            android:entries="@array/priorities"-->
+        <!--            android:background="@drawable/custom_input"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintTop_toBottomOf="@+id/title" />-->
+
+        <!--        <com.google.android.material.textfield.TextInputLayout-->
+        <!--            android:id="@+id/des"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginStart="16dp"-->
+        <!--            android:layout_marginEnd="16dp"-->
+        <!--            app:boxBackgroundMode="outline"-->
+        <!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+        <!--            app:boxCornerRadiusTopEnd="16dp"-->
+        <!--            app:boxCornerRadiusTopStart="16dp"-->
+        <!--            app:boxCornerRadiusBottomStart="16dp"-->
+        <!--            app:boxCornerRadiusBottomEnd="16dp"-->
+        <!--            app:counterEnabled="true"-->
+        <!--            android:layout_marginTop="25dp"-->
+        <!--            app:counterMaxLength="500"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--           app:layout_constraintTop_toBottomOf="@id/priorities_spinner">-->
+        <!--            <com.google.android.material.textfield.TextInputEditText-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="200dp"-->
+        <!--                android:isScrollContainer="true"-->
+        <!--                android:scrollbars="vertical"-->
+        <!--                android:text="@={viewModel.description}"-->
+        <!--                android:gravity="top"-->
+        <!--                android:maxLength="500"-->
+        <!--                android:hint="Enter the description" />-->
+        <!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/save"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Save"-->
+        <!--            android:textAllCaps="false"-->
+        <!--            android:layout_marginTop="10dp"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/des"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

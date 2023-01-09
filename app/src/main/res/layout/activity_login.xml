@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".LoginActivity">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remember_your_todo"
+            android:textColor="@color/white"
+            android:fontFamily="@font/dm_sans_medium"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"/>
+        <TextView
+            android:id="@+id/tagline"
+            android:layout_width="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15dp"
+            android:layout_height="wrap_content"
+            android:text="@string/welcome"
+            android:textColor="@color/light_grey"
+            android:fontFamily="@font/dm_sans_regular"
+            android:textSize="20sp"
+           app:layout_constraintTop_toBottomOf="@id/heading"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"/>
+
+
+
+
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/image_logo"
+            android:layout_marginTop="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@id/tagline" />
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/username_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:strokeColor="@color/border_color"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="25dp"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/fill_color">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:hint="@string/username"
+                android:drawableStart="@drawable/user_icon"
+                android:drawablePadding="10dp"
+                android:textColor="@color/white"
+                android:paddingStart="10dp"
+                android:fontFamily="@font/dm_sans_regular"
+                android:paddingVertical="15dp"
+                android:textColorHint="@color/colorGrey"
+                android:background="@android:color/transparent"/>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/password_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/username_card"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:strokeColor="@color/border_color"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            app:strokeWidth="1dp"
+            app:cardBackgroundColor="@color/fill_color">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:hint="@string/password"
+                android:paddingStart="10dp"
+                android:drawableStart="@drawable/key"
+                android:drawablePadding="10dp"
+                android:paddingVertical="15dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/dm_sans_regular"
+                android:textColorHint="@color/colorGrey"
+                android:background="@android:color/transparent"/>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/password_card"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:paddingVertical="15dp"
+            android:fontFamily="@font/dm_sans_medium"
+            android:backgroundTint="@color/pinkish"
+            android:text="@string/login"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/login"
+            android:layout_marginTop="17dp"
+            android:textStyle="bold"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/material_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical|center"
+            app:iconGravity="textStart"
+            android:text="@string/google"
+            app:iconTint="@null"
+            android:backgroundTint="@color/fill_color"
+            android:paddingVertical="15dp"
+            android:layout_marginStart="25dp"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="17dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/border_color"
+            app:layout_constraintTop_toBottomOf="@id/or"
+            android:textColor="@android:color/white"
+            app:icon="@drawable/google_icon" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
